@@ -1,4 +1,4 @@
-package com.vijay.learn.sbms.msscbrewery.services;
+package com.vijay.learn.sbms.msscbrewery.v1.services;
 /*
 Project : mssc-brewery
 IDE     : IntelliJ IDEA
@@ -6,7 +6,7 @@ User    : Vijay Gupta
 Date    : 19 July 2020
 */
 
-import com.vijay.learn.sbms.msscbrewery.web.model.BeerDto;
+import com.vijay.learn.sbms.msscbrewery.v1.web.model.BeerDto;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 

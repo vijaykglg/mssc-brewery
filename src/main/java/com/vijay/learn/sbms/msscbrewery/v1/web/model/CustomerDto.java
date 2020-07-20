@@ -1,4 +1,4 @@
-package com.vijay.learn.sbms.msscbrewery.web.model;
+package com.vijay.learn.sbms.msscbrewery.v1.web.model;
 /*
 Project : mssc-brewery
 IDE     : IntelliJ IDEA

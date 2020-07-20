@@ -1,8 +1,8 @@
-package com.vijay.learn.sbms.msscbrewery.web.controller;
+package com.vijay.learn.sbms.msscbrewery.v1.web.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.vijay.learn.sbms.msscbrewery.services.BeerService;
-import com.vijay.learn.sbms.msscbrewery.web.model.BeerDto;
+import com.vijay.learn.sbms.msscbrewery.v1.services.BeerService;
+import com.vijay.learn.sbms.msscbrewery.v1.web.model.BeerDto;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

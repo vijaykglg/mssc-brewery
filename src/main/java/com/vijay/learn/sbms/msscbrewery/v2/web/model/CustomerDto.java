@@ -1,4 +1,4 @@
-package com.vijay.learn.sbms.msscbrewery.web.model;
+package com.vijay.learn.sbms.msscbrewery.v2.web.model;
 /*
 Project : mssc-brewery
 IDE     : IntelliJ IDEA
@@ -17,9 +17,8 @@ import java.util.UUID;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class BeerDto {
+public class CustomerDto {
+
     private UUID id;
-    private String beerName;
-    private String beerStyle;
-    private Long upc;
+    private String name;
 }
