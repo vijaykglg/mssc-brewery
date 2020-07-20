@@ -7,10 +7,12 @@ Date    : 19 July 2020
 */
 
 import com.vijay.learn.sbms.msscbrewery.web.model.BeerDto;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.util.UUID;
 
+@Slf4j
 @Service
 public class BeerServiceImpl implements BeerService {
 
@@ -32,6 +34,11 @@ public class BeerServiceImpl implements BeerService {
     @Override
     public void updateBeer(UUID beerId, BeerDto beerDto) {
         //ToDo to add actual implementation to update Beer
+    }
+
+    @Override
+    public void deleteById(UUID beerId) {
+        log.debug("deleting the Beer...");
     }
 
 

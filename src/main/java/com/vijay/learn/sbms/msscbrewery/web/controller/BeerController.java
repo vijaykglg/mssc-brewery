@@ -35,7 +35,7 @@ public class BeerController {
         BeerDto savedDto = beerService.saveNewBeer(beerDto);
 
         HttpHeaders headers = new HttpHeaders();
-        headers.add("Location","/api/v1/beer"+savedDto.getId().toString());
+        headers.add("Location","/api/v1/beer/"+savedDto.getId().toString());
         return new ResponseEntity(headers,HttpStatus.CREATED);
     }
 
@@ -43,5 +43,11 @@ public class BeerController {
     public ResponseEntity updateBeer(@PathVariable("beerId") UUID beerId,@RequestBody BeerDto beerDto){
         beerService.updateBeer(beerId,beerDto);
         return new ResponseEntity(HttpStatus.NO_CONTENT);
+    }
+
+    @DeleteMapping({"/{beerId}"})
+    @ResponseStatus(HttpStatus.NO_CONTENT)//Another implementation where return type can be void with ResponseStatus Annotation
+    public void deleteBeer(@PathVariable("beerId") UUID beerId){
+        beerService.deleteById(beerId);
     }
 }
