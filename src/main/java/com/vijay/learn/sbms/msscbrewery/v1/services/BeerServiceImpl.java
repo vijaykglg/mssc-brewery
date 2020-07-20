@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
 import java.util.UUID;
 
 @Slf4j
-@Service
+@Service("beerServiceV1")
 public class BeerServiceImpl implements BeerService {
 
     @Override

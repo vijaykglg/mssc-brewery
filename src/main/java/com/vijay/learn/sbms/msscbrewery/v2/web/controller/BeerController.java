@@ -8,6 +8,7 @@ Date    : 19 July 2020
 
 import com.vijay.learn.sbms.msscbrewery.v2.services.BeerService;
 import com.vijay.learn.sbms.msscbrewery.v2.web.model.BeerDto;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -16,11 +17,11 @@ import org.springframework.web.bind.annotation.*;
 import java.util.UUID;
 
 @RequestMapping("/api/v2/beer")
-@RestController
+@RestController("beerControllerV2")
 public class BeerController {
     private final BeerService beerService;
 
-    public BeerController(BeerService beerService) {
+    public BeerController(@Qualifier("beerServiceV2") BeerService beerService) {
         this.beerService = beerService;
     }
 

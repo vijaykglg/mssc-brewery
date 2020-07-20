@@ -8,6 +8,7 @@ Date    : 19 July 2020
 
 import com.vijay.learn.sbms.msscbrewery.v2.services.CustomerService;
 import com.vijay.learn.sbms.msscbrewery.v2.web.model.CustomerDto;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -16,11 +17,11 @@ import org.springframework.web.bind.annotation.*;
 import java.util.UUID;
 
 @RequestMapping("/api/v2/customer")
-@RestController
+@RestController("customerControllerV2")
 public class CustomerController {
     private final CustomerService customerService;
 
-    public CustomerController(CustomerService customerService) {
+    public CustomerController(@Qualifier("customerServiceV2") CustomerService customerService) {
         this.customerService = customerService;
     }
 
