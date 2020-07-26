@@ -10,7 +10,7 @@ import com.vijay.learn.sbms.msscbrewery.v2.domain.Beer;
 import com.vijay.learn.sbms.msscbrewery.v2.web.model.BeerDto;
 import org.mapstruct.Mapper;
 
-@Mapper
+@Mapper(uses = DateMapper.class)
 public interface BeerMapper {
     BeerDto beerToBeerDto(Beer beer);
     Beer beerDtoToBeer(BeerDto dto);
